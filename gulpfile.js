@@ -5,14 +5,15 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat');
 
-gulp.task('build', function() {
-    // gulp.src([ './assets/js/src/*.js', ])
-    //     .pipe(concat('app.js'))
-    //     .pipe(gulp.dest('./assets/js'));
+gulp.task('default', function() {
+    gulp.src(['./assets/js/src/jquery-1.11.3.min.js', './assets/js/src/*.js'])
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./assets/js'));
 
-    gulp.src(['./assets/css/src/*.css'])
+    gulp.src(['./assets/css/src/*.css', './assets/css/src/*.scss'])
         .pipe(concat('styles.min.css'))
-        // .pipe(sass())
+        .pipe(sass())
         .pipe(myth())
         .pipe(csso())
         .pipe(gulp.dest('./assets/css'));

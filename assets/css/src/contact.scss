@@ -1,0 +1,97 @@
+.contact {
+    height: 467px;
+    background: #fff;
+    padding: 27px 120px 0 52%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 16px;
+    &-form {
+        padding-bottom: 55px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-title {
+            color: #ff8a80;
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            width: 100%;
+        }
+         &-select,
+        input {
+            height: 46px;
+            border: 2px solid #e3f2fd;
+            border-radius: 2px;
+            margin: 0 0 20px;
+            width: 48%;
+            box-sizing: border-box;
+            text-indent: 20px;
+            position: relative;
+            color: #636363;
+            line-height: 42px;
+        }
+        &-select{
+            cursor: pointer;
+            position: relative;
+            ul{
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+                border: 2px solid #e3f2fd;
+                position: absolute;
+                top: 46px;
+                left: 0px;
+                width: 100%;
+                display: none;
+                z-index: 20;
+                box-sizing: border-box;
+            }
+            li{
+                border-bottom: 2px solid #e3f2fd;
+                width: 100%;
+                color: #636363;
+                background: #fff;
+                transition: 0.3s;
+                cursor: pointer;
+                box-sizing: border-box;
+                &:hover{
+                    background: #e3f2fd;
+                }
+            }
+            &::before {
+                background: url("../i/down-arrow.png") no-repeat;
+                width: 21px;
+                height: 10px;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+            }
+        }
+        textarea {
+            border: 2px solid #e3f2fd;
+            border-radius: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            text-indent: 20px;
+        }
+        &-btn {
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            background: #ef5350;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 15px 40px;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
