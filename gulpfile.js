@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+    var gulp = require('gulp'),
     csso = require('gulp-csso'),
     myth = require('gulp-myth'),
     uglify = require('gulp-uglify'),

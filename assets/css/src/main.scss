@@ -1,53 +1,86 @@
 * {
-    font-family: 'Myriad Pro';
+    font-family: 'Montserrat';
+    color: #fff;
 }
 header {
     background: #e94643;
-    position: relative;
     border-top: 22px solid #04e4a2;
     width: 100%;
-    padding: 19px 17%;
-    box-sizing: border-box;
+    padding: 16px 0;
+    display: inline-block;
+    vertical-align: middle;
     .logo {
+        text-transform: lowercase;
+        font-weight: 700;
+        font-size: 35px;
+        letter-spacing: -1px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 17%;
+        font-family: 'Montserrat';
     }
     .btn-contact {
-        font-size: 17px;
+        font-size: 16px;
         color: #f9fbe7;
         text-transform: uppercase;
         text-decoration: none;
         border-bottom: 3px solid #fdd835;
-        position: relative;
-        left: 787px;
-        bottom: 13px;
-        letter-spacing: 1px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 58%;
+        font-family: 'Gotham Book';
+        @media screen and (max-width:1024px) {
+            margin-left: 43%;
+        }
+        @media screen and (max-width:540px) {
+            margin-left: 21%;
+        }
     }
 }
 footer {
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     width: 100%;
     background: #fefcf2;
-    font-size: 16px;
-    color: #636363;
-    padding: 27px 14%;
-    display:inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 23px 14%;
+    display: inline-block;
     vertical-align: middle;
+    @media screen and (max-width:1366px) {
+        font-size: 16px;
+    }
     .info {
-        display:inline-block;
+        display: inline-block;
         vertical-align: middle;
+        color: #636363;
+        @media screen and (max-width:320px) {
+            margin-bottom: 13px;
+        }
     }
     .footer-contact {
         display: inline-block;
-        margin-left: 20%;
-    }
-    .icon {
-        width: 30px;
-        height: 24px;
-        vertical-align: middle;
-        display:inline-block;
-    span{
-        display:inline-block;
-        vertical-align: middle;
-    }
+        margin-left: 36%;
+        @media screen and (max-width:1366px) {
+            margin-left: 25%;
+        }
+        @media screen and (max-width:540px) {
+            margin-left: 2%;
+        }
+        @media screen and (max-width:320px) {
+            margin-left: -2%;
+        }
+        &-icon {
+            width: 30px;
+            height: 24px;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 9px;
+        }
+        span {
+            color: #636363;
+            display: inline-block;
+            vertical-align: middle;
+        }
     }
 }

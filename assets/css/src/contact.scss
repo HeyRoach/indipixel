@@ -1,28 +1,50 @@
 .contact {
-    height: 467px;
+    height: 457px;
     background: #fff;
-    padding: 27px 120px 0 52%;
+    padding: 28px 120px 0 52%;
     flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
     font-size: 16px;
+    @media screen and (max-width:1920px) {
+        height: 520px;
+    }
+    @media screen and (max-width:1366px) {
+        height: 396px;
+    }
+    @media screen and (max-width:1280px) {
+        height: 470px;
+    }
+    @media screen and (max-width:800px) {
+        padding: 28px 98px 0 15%;
+    }
+    @media screen and (max-width:540px) {
+        padding: 28px 58px 0 10%;
+    }
     &-form {
         padding-bottom: 55px;
         position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        color: #636363;
+        font-size: 16px;
+        font-weight: 300;
         &-title {
             color: #ff8a80;
-            font-size: 20px;
+            font-size: 24px;
             text-transform: capitalize;
             margin-bottom: 20px;
             margin-left: 25px;
             width: 100%;
+            @media screen and (max-width:1366px) {
+                font-size: 20px;
+            }
         }
-         &-select,
+        &-select,
         input {
-            height: 46px;
+            height: 65px;
+            font-size: 22px;
             border: 2px solid #e3f2fd;
             border-radius: 2px;
             margin: 0 0 20px;
@@ -30,34 +52,56 @@
             box-sizing: border-box;
             text-indent: 20px;
             position: relative;
+            line-height: 61px;
             color: #636363;
-            line-height: 42px;
+            @media screen and (max-width:1366px) {
+                height: 46px;
+                font-size: 16px;
+            }
+            @media screen and (max-width:1280px) {
+                line-height: 41px;
+            }
+            @media screen and (max-width:800px) {
+                line-height: 45px;
+            }
+            @media screen and (max-width:320px) {
+                text-indent: 0;
+            }
         }
-        &-select{
+        &-select {
             cursor: pointer;
             position: relative;
-            ul{
+            font-size: 22px;
+            font-weight: 300;
+            @media screen and (max-width:1366px) {
+                font-size: 16px;
+            }
+            span {
+                color: #636363;
+            }
+            ul {
+                color: #636363;
                 list-style: none;
-                padding: 0px;
-                margin: 0px;
+                padding: 0;
+                margin: 0;
                 border: 2px solid #e3f2fd;
                 position: absolute;
                 top: 46px;
-                left: 0px;
+                left: 0;
                 width: 100%;
                 display: none;
                 z-index: 20;
                 box-sizing: border-box;
             }
-            li{
+            li {
                 border-bottom: 2px solid #e3f2fd;
                 width: 100%;
-                color: #636363;
                 background: #fff;
                 transition: 0.3s;
                 cursor: pointer;
                 box-sizing: border-box;
-                &:hover{
+                color: #636363;
+                &:hover {
                     background: #e3f2fd;
                 }
             }
@@ -78,20 +122,27 @@
             border-radius: 2px;
             width: 100%;
             box-sizing: border-box;
+            font-size: 22px;
             text-indent: 20px;
+            line-height: 39px;
+            @media screen and (max-width:1366px) {
+                font-size: 16px;
+            }
         }
         &-btn {
             border-radius: 5px;
             text-align: center;
-            color: #fff;
             background: #ef5350;
-            font-size: 20px;
+            font-size: 24px;
             text-transform: uppercase;
-            padding: 15px 40px;
+            padding: 8px 33px;
             display: inline-block;
             position: absolute;
             right: 0;
             bottom: 0;
+            @media screen and (max-width:1366px) {
+                font-size: 20px;
+            }
         }
     }
 }

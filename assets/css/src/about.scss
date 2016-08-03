@@ -1,10 +1,16 @@
 .about {
     background: #ef5350;
-    height: 581px;
-    padding: 169px 10% 0px 52%;
+    height: 584px;
+    padding: 182px 10% 0 52%;
     flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
+    @media screen and (max-width:800px) {
+        padding: 179px 9% 0 16%;
+    }
+    @media screen and (max-width:320px) {
+        padding: 56px 9% 0 16%;
+    }
     &-info {
         display: flex;
         flex-wrap: wrap;
@@ -18,15 +24,30 @@
         word-spacing: 2;
         padding-bottom: 69px;
         h1 {
-            font-size: 30px;
+            font-size: 38px;
+            font-weight: 400;
             text-transform: uppercase;
-            margin-top:16px;
-            letter-spacing: 1px;
+            margin: 0;
+            @media screen and (max-width:1280px) {
+                font-size: 31px;
+            }
+            @media screen and (max-width:1366px) {
+                font-size: 33px;
+            }
         }
         h2 {
-            font-size: 18px;
-            padding-top: 6px;
-            word-spacing: 7px;
+            font-size: 24px;
+            font-weight: 100;
+            margin: 24px 0;
+            word-spacing: 6px;
+            letter-spacing: -1px;
+            font-size: 33px;
+            @media screen and (max-width:1280px) {
+                font-size: 17px;
+            }
+            @media screen and (max-width:1366px) {
+                font-size: 18px;
+            }
         }
         &-btn {
             text-transform: uppercase;
@@ -36,16 +57,40 @@
             border-radius: 3px;
             position: absolute;
             display: inline-block;
-            bottom: 0px;
-            right: 0px;
-            padding: 14px 34px;
+            bottom: 0;
+            right: 0;
+            padding: 18px 28px;
             margin-right: 8px;
-            font-size: 18px;
+            font-size: 17px;
+            @media screen and (max-width:1280px) {
+                padding: 11px 19px;
+            }
+            @media screen and (max-width:1366px) {
+                padding: 13px 23px;
+            }
         }
     }
-    &-phone{
+    &-phone {
         position: absolute;
-        right: 50%;
-        top: 23px;
+        left: -10%;
+        top: 6%;
+        @media screen and (max-width:1680px) {
+            left: -16%;
+        }
+        @media screen and (max-width:1366px) {
+            left: -22%;
+        }
+        @media screen and (max-width:1280px) {
+            left: -27%;
+        }
+        @media screen and (max-width:1152px) {
+            left: -36%;
+        }
+        @media screen and (max-width:1024px) {
+            left: -47%;
+        }
+        @media screen and (max-width:800px) {
+            display: none;
+        }
     }
 }
