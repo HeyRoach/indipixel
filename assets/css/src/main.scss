@@ -7,8 +7,17 @@ header {
     border-top: 22px solid #04e4a2;
     width: 100%;
     padding: 16px 0;
-    display: inline-block;
     vertical-align: middle;
+    box-sizing: border-box;
+    @media screen and (max-width:800px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        align-items: center;
+    }
+    @media screen and (max-width:540px) {
+        padding: 10px 15px;
+    }
     .logo {
         text-transform: lowercase;
         font-weight: 700;
@@ -18,6 +27,9 @@ header {
         vertical-align: middle;
         margin-left: 17%;
         font-family: 'Montserrat';
+        @media screen and (max-width:800px) {
+            margin-left: 0px;
+        }
     }
     .btn-contact {
         font-size: 16px;
@@ -32,44 +44,51 @@ header {
         @media screen and (max-width:1024px) {
             margin-left: 43%;
         }
-        @media screen and (max-width:540px) {
-            margin-left: 21%;
+        @media screen and (max-width:800px) {
+            margin-left: 0px;
+            display: block;
         }
     }
 }
 footer {
-    left: 0;
-    bottom: 0;
     width: 100%;
     background: #fefcf2;
     font-size: 18px;
     font-weight: 300;
     padding: 23px 14%;
-    display: inline-block;
-    vertical-align: middle;
+    box-sizing: border-box;
+
     @media screen and (max-width:1366px) {
         font-size: 16px;
+    }
+    @media screen and (max-width:800px) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        margin-top: 15px;
+    }
+    @media screen and (max-width:540px) {
+        padding: 15px;
     }
     .info {
         display: inline-block;
         vertical-align: middle;
         color: #636363;
-        @media screen and (max-width:320px) {
-            margin-bottom: 13px;
-        }
+        margin-bottom: 10px;
     }
     .footer-contact {
         display: inline-block;
         margin-left: 36%;
         @media screen and (max-width:1366px) {
-            margin-left: 25%;
+            margin-left: 20%;
         }
-        @media screen and (max-width:540px) {
-            margin-left: 2%;
+        @media screen and (max-width:800px) {
+            margin-left: 0px;
         }
-        @media screen and (max-width:320px) {
-            margin-left: -2%;
-        }
+
         &-icon {
             width: 30px;
             height: 24px;

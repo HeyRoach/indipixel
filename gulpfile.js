@@ -5,16 +5,19 @@
     sass = require('gulp-sass'),
     concat = require('gulp-concat');
 
-gulp.task('default', function() {
-    gulp.src(['./assets/js/src/jquery-1.11.3.min.js', './assets/js/src/*.js'])
-        .pipe(concat('app.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./assets/js'));
-
+gulp.task('css', function() {
     gulp.src(['./assets/css/src/*.css', './assets/css/src/*.scss'])
         .pipe(concat('styles.min.css'))
         .pipe(sass())
         .pipe(myth())
         .pipe(csso())
         .pipe(gulp.dest('./assets/css'));
+});
+
+gulp.task('js', function() {
+    gulp.src(['./assets/js/src/jquery-1.11.3.min.js', './assets/js/src/*.js'])
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./assets/js'));
+
 });

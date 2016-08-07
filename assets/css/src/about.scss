@@ -6,10 +6,11 @@
     justify-content: space-between;
     box-sizing: border-box;
     @media screen and (max-width:800px) {
-        padding: 179px 9% 0 16%;
+        padding: 30px;
+        height: auto;
     }
-    @media screen and (max-width:320px) {
-        padding: 56px 9% 0 16%;
+    @media screen and (max-width:540px) {
+        padding: 15px;
     }
     &-info {
         display: flex;
